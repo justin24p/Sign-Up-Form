@@ -1,0 +1,189 @@
+:root {
+    --color: #5100e6;
+    --txt: rgb(185, 185, 185);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    color: var(--txt);
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+.container,
+.logo {
+    display: flex;
+    flex-flow: row wrap;
+}
+/*left side*/
+.picture {
+    background-image: url(waves.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vw;
+}
+.logo {
+    height: auto;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: relative;
+    top: 20vh;
+    gap: 1vw;
+    padding: 15px 0;
+
+    justify-content: center;
+    align-items: center;
+}
+.orca {
+    height: 10vh;
+}
+h1 {
+    color: white;
+}
+
+/*right side*/
+.dummy-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 90%;
+}
+.right {
+    width: 60vw;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.left {
+    padding-left: 3vw;
+    padding-right: 6vw;
+}
+
+.log-in {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+form .button {
+    background-color: rgb(14, 14, 14);
+}
+button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color);
+    background-color: rgb(14, 14, 14);
+    border: 1.5px solid var(--color);
+    border-radius: 3px;
+    padding: 10px 40px;
+    cursor: pointer;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+button:hover {
+    background-color: var(--color);
+    color: rgb(14, 14, 14);
+}
+a {
+    text-decoration: none;
+    color: var(--color);
+    font-weight: 700;
+}
+a:hover {
+    color: white;
+}
+p {
+    margin-bottom: 1rem;
+}
+
+.input {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    flex-wrap: wrap;
+    opacity: 50%;
+}
+input {
+    background-color: rgb(14, 14, 14);
+    border: 1.5px solid var(--txt);
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: var(--color);
+    outline: none;
+    box-shadow: 0 0 5px var(--color);
+}
+.form-title {
+    width: 100%;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.form {
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@media only screen and (max-width: 700px) {
+    .container {
+        flex-flow: column;
+        height: auto;
+        text-align: center;
+    }
+    .logo {
+        width: 100vw;
+        position: static;
+        gap: 10px;
+    }
+    .picture {
+        display: flex;
+        width: 100vw;
+        height: 14vh;
+        width: 100vw;
+    }
+    .form {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .right {
+        width: auto;
+        height: auto;
+    }
+    .dummy-text {
+        font-weight: 600;
+        width: auto;
+        margin-top: 40px;
+    }
+    .button,
+    .log-in {
+        display: flex;
+        justify-content: center;
+    }
+    button {
+        width: 50vw;
+        height: 5rem;
+    }
+    .input {
+        text-align: center;
+        width: auto;
+    }
+    input {
+        width: 70vw;
+        font-size: 1rem;
+        height: 1.5rem;
+        /*1,5rem*/
+    }
+    .left {
+        padding: 10px 20px;
+    }
+}
